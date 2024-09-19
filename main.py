@@ -145,7 +145,8 @@ async def _get_week_schedule(chat_id: int) -> str:
 
                     cabinet_number_end = cabinet_number.end()
 
-                    place_text = f'{place_text[:cabinet_number_end]}__*{place_text[cabinet_number_end:]}*__'
+                    place_text = \
+                        f"{place_text[:cabinet_number_end]} __*{place_text[cabinet_number_end:].replace(' ', '')}*__"
 
                 result += f" {place_text} {normalize_text(lesson_teacher)}"
 
