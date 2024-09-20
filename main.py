@@ -239,7 +239,7 @@ async def messages_updater() -> None:
                 continue
 
             active_messages[message.chat.id] = \
-                await message.edit_text(new_text, parse_mode=ParseMode.MARKDOWN_V2)
+                await message.edit_text(new_text, parse_mode=ParseMode.MARKDOWN_V2, reply_markup=update_week_keyboard)
 
         sleep_time = (
                 (datetime.now() + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0) - datetime.now()
