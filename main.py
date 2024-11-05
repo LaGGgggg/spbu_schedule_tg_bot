@@ -155,7 +155,7 @@ async def _get_week_schedule(chat_id: int) -> str:
         result += '\n'
         day_date += timedelta(days=1)
 
-    result += '_Обновлено: ' + datetime.now().strftime('%d\\.%M\\.%Y %H:%m:%S') + '_'
+    result += '_Обновлено: ' + datetime.now().strftime('%d\\.%m\\.%Y %H:%M:%S') + '_'
 
     return result
 
