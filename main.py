@@ -243,7 +243,7 @@ async def messages_updater() -> None:
 
         sleep_time = (
                 (datetime.now() + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0) - datetime.now()
-        ).seconds
+        ).seconds + 3600 * 3  # 3 hours
 
         await asyncio_sleep(sleep_time)
 
